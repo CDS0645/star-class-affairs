@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build Windows EXE
-        run: npm run build
+        run: npx electron-builder --win --publish never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
